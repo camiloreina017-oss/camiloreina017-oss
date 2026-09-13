@@ -1,16 +1,35 @@
-## Hi there 👋
+# 👋 Hola, soy Camilo Reina
 
-<!--
-**camiloreina017-oss/camiloreina017-oss** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## 👨‍💻 Ingeniero de Sistemas
 
-Here are some ideas to get you started:
+Soy Ingeniero de Sistemas, interesado en el desarrollo de software, análisis de datos y automatización de procesos.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### 🛠️ Tecnologías y herramientas
+
+- 🐍 Python
+- 🗄️ SQL
+- 📊 Power BI
+- 📈 Excel
+- 🔄 Power Query
+- ⚙️ Visual Basic / VBA
+- 🌐 HTML
+- 🎨 CSS
+- ☕ Java
+
+### 📂 Proyectos
+
+Actualmente estoy construyendo mi portafolio de proyectos relacionados con:
+
+- Análisis de datos
+- Desarrollo de aplicaciones
+- Automatización de procesos
+- Bases de datos
+- Dashboards y visualización de información
+
+### 🎯 Objetivo profesional
+
+Continuar desarrollándome como Ingeniero de Sistemas y participar en proyectos relacionados con tecnología, análisis de datos y desarrollo de soluciones empresariales.
+
+---
+
+📫 **GitHub:** [camiloreina017-oss](https://github.com/camiloreina017-oss)
