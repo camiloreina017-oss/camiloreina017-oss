@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de tecnologia</title>
+  
+  <!-- Carga iconos vectoriales desde FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Vincula la hoja de estilos CSS personalizada -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Barra de navegación superior fija -->
+  <header class="navbar">
+    <div class="nav-container">
+      <!-- Logo principal de la tienda -->
+      <a href="#" class="logo">
+        <i class="fa-solid fa-bag-shopping"></i> Technology
+      </a>
+
+      <!-- Caja del buscador de productos -->
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="search-input" placeholder="Buscar productos...">
+      </div>
+
+      <!-- Botón para abrir el carrito con el contador de items -->
+      <button class="cart-btn" id="open-cart-btn" aria-label="Ver Carrito">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-badge" id="cart-badge">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Contenedor central de la tienda -->
+  <main class="main-container">
+
+    <!-- Banner publicitario / bienvenida -->
+    <section class="hero">
+      <h1>Lo último en Tecnología</h1>
+      <p>Haz clic en cualquier producto para ver sus características detalladas.</p>
+    </section>
+
+    <!-- Filtros de categorías y ordenamiento de precios -->
+    <section class="filter-section">
+      <!-- Botones de categorías inyectados dinámicamente desde JS -->
+      <div class="categories" id="categories-container">
+        <!-- Generado dinámicamente -->
+      </div>
+      <!-- Desplegable para ordenar por precio -->
+      <div class="sort-box">
+        <label for="sort-select"><i class="fa-solid fa-arrow-up-wide-short"></i> Ordenar:</label>
+        <select id="sort-select">
+          <option value="featured">Destacados</option>
+          <option value="low">Precio: Menor a Mayor</option>
+          <option value="high">Precio: Mayor a Menor</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Grilla donde JS renderiza las tarjetas de los productos -->
+    <section class="products-grid" id="products-grid">
+      <!-- Generado por JavaScript -->
+    </section>
+
+  </main>
+
+  <!-- Ventana modal con información extendida de un producto -->
+  <div class="modal" id="product-detail-modal">
+    <div class="modal-content modal-lg">
+      <button class="close-btn" id="close-detail-modal-btn">&times;</button>
+      <!-- Detalles del producto inyectados dinámicamente por JS -->
+      <div class="product-detail-body" id="product-detail-body">
+        <!-- Generado dinámicamente por JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Capa oscura de fondo y panel desplegable lateral del carrito -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h2><i class="fa-solid fa-cart-shopping"></i> Tu Carrito</h2>
+      <button class="close-btn" id="close-cart-btn">&times;</button>
+    </div>
+
+    <!-- Lista de items agregados al carrito -->
+    <div class="cart-items" id="cart-items">
+      <!-- Generado dinámicamente -->
+    </div>
+
+    <!-- Cómputo de subtotal, envío, total y botón de pago -->
+    <div class="cart-footer">
+      <div class="summary-line">
+        <span>Subtotal</span>
+        <span id="cart-subtotal">$0.00</span>
+      </div>
+      <div class="summary-line">
+        <span>Envío</span>
+        <span id="cart-shipping">$0.00</span>
+      </div>
+      <div class="summary-line total-line">
+        <span>Total</span>
+        <span id="cart-total">$0.00</span>
+      </div>
+      <button class="btn btn-checkout" id="checkout-btn">Proceder al Pago</button>
+    </div>
+  </aside>
+
+  <!-- Ventana emergente con el formulario de datos para procesar la compra -->
+  <div class="modal" id="checkout-modal">
+    <div class="modal-content">
+      <button class="close-btn" id="close-modal-btn">&times;</button>
+      <h2><i class="fa-solid fa-credit-card"></i> Finalizar Compra</h2>
+      <p class="modal-subtitle">Ingresa tus datos para completar el pedido.</p>
+
+      <form id="checkout-form">
+        <div class="form-group">
+          <label for="name">Nombre Completo</label>
+          <input type="text" id="name" required placeholder="Nombre de la persona">
+        </div>
+        <div class="form-group">
+          <label for="email">Correo Electrónico</label>
+          <input type="email" id="email" required placeholder="correo@gmail.com">
+        </div>
+        <div class="form-group">
+          <label for="address">Dirección de Envío</label>
+          <input type="text" id="address" required placeholder="Direccion de residencia">
+        </div>
+        <div class="form-group">
+          <label for="payment-method">Método de Pago</label>
+          <select id="payment-method" required>
+            <option value="card">Tarjeta de Crédito / Débito</option>
+            <option value="cash">Efectivo contra entrega</option>
+            <option value="transfer">Transferencia Bancaria</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-checkout">Confirmar y Pagar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Alerta o mensaje flotante temporal de confirmación -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Vincula la lógica de JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
